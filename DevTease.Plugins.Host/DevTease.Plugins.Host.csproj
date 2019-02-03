@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <RootNamespace>DevTease.Plugins.Host</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="PluginFolder\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DevTease.Plugins.Api\DevTease.Plugins.Api.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="PluginFolder\">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="PluginFolder\PluginA\DevTease.Plugins.PluginA.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="PluginFolder\PluginA\DevTease.Plugins.PluginA.pdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
